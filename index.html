@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>튜닝앤코리아(주)</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+<style>
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+    header {
+      background: url('images/홈페이지 대문 사진.jpg') no-repeat center center;
+      background-size: cover;
+      color: white;
+      padding: 200px 20px 120px 20px;
+      text-align: center;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    }
+    nav {
+      background-color: #004d40;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 12px 0;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    nav a {
+      color: white;
+      padding: 8px 16px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    nav a:hover {
+      background-color: #00695c;
+    }
+    section {
+      display: none;
+      padding: 30px;
+      max-width: 1000px;
+      margin: 40px auto;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    section.active {
+      display: block;
+    }
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    h1, h2 {
+      color: #003366;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #00784B;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background: #005f36;
+    }
+
+    .product-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: start;
+      margin-top: 20px;
+    }
+    .product-grid a {
+      background: #00784B;
+      color: white;
+      padding: 10px 16px;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+    .product-grid a:hover {
+      background: #005f36;
+    }
+
+  .product-grid button {
+    background: #00784B;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-size: 14px;
+  }
+  .product-grid button:hover {
+    background: #005f36;
+  }
+
+  .product-grid-kyb {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: start;
+    margin-top: 20px;
+  }
+  .product-grid-kyb button {
+    background: #b71c1c;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-size: 14px;
+  }
+  .product-grid-kyb button:hover {
+    background: #7f0000;
+  }
+</style>
+</head>
+<body>
+<header style="height: 310px !important; background-image: url('images/홈페이지%20대문%20사진.jpg'); background-size: cover; background-position: center;"></header>
+
+
+  
+
+<nav>
+  <a onclick="showSection('intro')">튜닝앤코리아</a>
+  <a onclick="showSection('tein')">TEIN</a>
+  <a onclick="showSection('kyb')">KYB</a>
+  <a onclick="showSection('manuals')">장착설명서</a>
+  <a href="https://smartstore.naver.com/tuningnkorea" target="_blank">네이버스토어</a>
+  <a onclick="showSection('contact')">오시는길</a>
+</nav>
+
+
+
+  
+<section id="intro" class="active">
+  <h2>회사소개</h2>
+  <p>1991년 창립된 튜닝앤코리아㈜는 자동차 튜닝용품을 전문으로 수입 및 유통</p>
+  <p><strong>◈ 독점 수입하는 제품 ◈</strong></p>
+  <ul>
+    <li>일본 테인(TEIN) 서스펜션</li>
+    <li>일본 가야바(KYB) 서스펜션</li>
+  </ul>
+</section>
+
+
+  
+
+
+
+<section id="tein">
+  <h2>TEIN</h2>
+  <div class="product-grid">
+    <button onclick="showImage('images/TEIN.png')">TEIN 서스펜션 소개</button>
+    <button onclick="showImage('images/STAZ.png')">STAZ</button>
+    <button onclick="showImage('images/flex-z.png')">FLEX-Z</button>
+    <button onclick="showImage('images/MONO SPORT.png')">MONO SPORT</button>
+    <button onclick="showImage('images/ENDURA PRO PLUS.jpg')">ENDURA PRO PLUS</button>
+    <button onclick="showImage('images/ENDURA PRO BASIC.JPG')">ENDURA PRO BASIC</button>
+    <button onclick="showImage('images/edfc active pro.png')">EDFC ACTIVE PRO</button>
+    <button onclick="showImage('images/EDFC5.png')">EDFC5</button>
+  </div>
+  <div id="tein-image-display" style="margin-top: 30px; text-align: center;">
+    <img id="tein-image" src="" alt="" style="max-width: 100%; height: auto; display: none; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1);" />
+  </div>
+</section>
+
+
+
+
+
+  
+
+
+<section id="kyb">
+  <h2>KYB</h2>
+  <div class="product-grid-kyb">
+    <button onclick="showKYBImage('images/kyb.jpg')">KYB 서스펜션 소개</button>
+    <button onclick="showKYBImage('images/excel-g.jpg')">EXCEL-G</button>
+    <button onclick="showKYBImage('images/GAS A JUST.png')">GAS A JUST</button>
+  </div>
+  <div id="kyb-image-display" style="margin-top: 30px; text-align: center;">
+    <img id="kyb-image" src="" alt="" style="max-width: 100%; height: auto; display: none; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1);" />
+  </div>
+</section>
+
+
+
+
+  <section id="manuals">
+    <h2>장착 설명서</h2>
+    <p>각 차종별 장착 설명서를 제공합니다 (예: 아반떼 CN7, 모하비, G80 등).</p>
+  </section>
+
+  
+
+
+
+<section id="store">
+  <h2>네이버 스마트스토어</h2>
+  <p>튜닝앤코리아의 제품은 아래 스마트스토어에서 구매하실 수 있습니다.</p>
+  <a class="btn" href="https://smartstore.naver.com/tuningnkorea" target="_blank">네이버 스마트스토어 바로가기</a>
+  <img src="images/store_preview.jpg" alt="스토어 미리보기" style="max-width: 100%; margin-top: 20px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.05);">
+</section>
+
+
+
+
+
+  
+
+
+
+<section id="contact">
+  <h2>오시는 길</h2>
+  <p>주소: 경기도 광주시 곤지암읍 신만로 458-9 튜닝앤코리아</p>
+  <p>전화번호: 02-454-6500</p>
+  <p><a href="https://maps.google.com?q=경기도 광주시 곤지암읍 신만로 458-9" target="_blank">구글 지도에서 보기</a></p>
+  
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3171.13040862512!2d127.40041201184017!3d37.363091071975695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x356356b56c40fd99%3A0x847f1aa47badacc1!2z6rK96riw64-EIOq0keyjvOyLnCDqs6Tsp4DslZTsnY0g7Iug66eM66GcIDQ1OC05!5e0!3m2!1sko!2skr!4v1750055504033!5m2!1sko!2skr"
+  width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+  title="Google 지도 - 튜닝앤코리아"></iframe>
+
+</section>
+
+
+
+
+
+  <footer style="background-color: #222; color: white; text-align: center; padding: 1em 0;">
+  © 튜닝앤코리아(주). All rights reserved.
+</footer>
+
+ <script>
+  function showSection(id) {
+    const sections = document.querySelectorAll('section');
+    sections.forEach(section => section.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+
+    // 추가된 부분: 자동 이미지 보여주기
+    if (id === 'tein') {
+      showImage('images/TEIN.png'); // TEIN 서스펜션 소개 자동 표시
+    } else if (id === 'kyb') {
+      showKYBImage('images/kyb.jpg'); // KYB 서스펜션 소개 자동 표시
+    }
+  }
+</script>
+
+</body>
+</html>
+
+<script>
+  function showImage(src) {
+    const img = document.getElementById('tein-image');
+    img.src = src;
+    img.style.display = 'block';
+  }
+</script>
+
+<script>
+  function showKYBImage(src) {
+    const img = document.getElementById('kyb-image');
+    img.src = src;
+    img.style.display = 'block';
+  }
+</script>
