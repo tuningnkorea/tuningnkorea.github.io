@@ -1,13 +1,11 @@
+
+```html
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta name="naver-site-verification" content="48f2c1685b321b6dd84fe5a55ab1aebf97f6194e" />
-  <meta name="naver-site-verification" content="cf0b873221b29fdf500467b173cb40bc36401051" />
-  <meta charset="UTF-8">
-  <meta name="description" content="TEIN, STAZ, KYB 서스펜션 전문 튜닝앤코리아입니다. 테인 서스펜션, 승차감 튜닝, 장착 문의 가능합니다.">
-  <meta name="keywords" content="튜닝앤코리아, 테인, 테인 쇼바, 테인 STAZ, 테인 서스펜션, TEIN, STAZ, KYB, 서스펜션, 쇼바, 자동차 튜닝, 승차감 튜닝, 자동차 서스펜션, tein staz 쇼바">
+  <meta charset="UTF-####">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>튜닝앤코리아 | TEIN STAZ 서스펜션 공식 장착 파트너</title>
+  <title>튜닝앤코리아(주)</title>
   
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
 <style>
@@ -132,6 +130,33 @@
   .product-grid-kyb button:hover {
     background: #7f0000;
   }
+    
+    .manual-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 20px;
+      justify-content: start;
+    }
+    .manual-tabs button {
+      background: #00784B;
+      color: white;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+      font-size: 14px;
+    }
+    .manual-tabs button:hover {
+      background: #005f36;
+    }
+    .manual-content {
+      display: none;
+    }
+    .manual-content.active {
+      display: block;
+    }
 </style>
 </head>
 <body>
@@ -171,8 +196,8 @@
   <h2>TEIN</h2>
   <div class="product-grid">
     <button onclick="showImage('images/TEIN.png')">TEIN 서스펜션 소개</button>
-    <button onclick="showImage('images/STAZ.png')">STAZ</button>
     <button onclick="showImage('images/flex-z.png')">FLEX-Z</button>
+    <button onclick="showImage('images/STAZ.png')">STAZ</button>
     <button onclick="showImage('images/MONO SPORT.png')">MONO SPORT</button>
     <button onclick="showImage('images/ENDURA PRO PLUS.jpg')">ENDURA PRO PLUS</button>
     <button onclick="showImage('images/ENDURA PRO BASIC.JPG')">ENDURA PRO BASIC</button>
@@ -207,9 +232,29 @@
 
 
   <section id="manuals">
-    <h2>장착 설명서</h2>
-    <p>각 차종별 장착 설명서를 제공합니다 (예: 아반떼 CN7, 모하비, G80 등).</p>
-  </section>
+    <h2>STAZ 장착 설명서</h2>
+    <div class="manual-tabs">
+ <button onclick="showManualImage('images/장착설명서/K5, 쏘나타 YF.jpg')">K5, 쏘나타 YF</button>
+ <button onclick="showManualImage('images/장착설명서/그랜저 HG, K7.jpg')">그랜저 HG, K7</button>
+ <button onclick="showManualImage('images/장착설명서/말리부.jpg')">말리부</button>
+ <button onclick="showManualImage('images/장착설명서/모하비.jpg')">모하비</button>
+ <button onclick="showManualImage('images/장착설명서/스포티지 QL, 투싼 TL.jpg')">스포티지 QL, 투싼 TL</button>
+ <button onclick="showManualImage('images/장착설명서/싼타페 DM 2륜.jpg')">싼타페 DM 2륜</button>
+ <button onclick="showManualImage('images/장착설명서/싼타페 DM 4륜.jpg')">싼타페 DM 4륜</button>
+ <button onclick="showManualImage('images/장착설명서/쏘나타 DN8,K5 DL3.jpg')">쏘나타 DN8,K5 DL3</button>
+  <button onclick="showManualImage('images/장착설명서/쏘나타 LF, 그랜저 IG, 올뉴 K5, 올뉴 K7.jpg')">쏘나타 LF, 그랜저 IG, 올뉴 K5, 올뉴 K7</button>
+  <button onclick="showManualImage('images/장착설명서/쏘렌토 MQ4,더뉴싼타페.jpg')">쏘렌토 MQ4,더뉴싼타페</button>
+  <button onclick="showManualImage('images/장착설명서/쏘렌토 UM,싼타페 TM.jpg')">쏘렌토 UM,싼타페 TM</button>
+  <button onclick="showManualImage('images/장착설명서/제네시스 쿠페.jpg')">제네시스 쿠페</button>
+            <button onclick="showManualImage('images/장착설명서/카니발 KA4.jpg')">카니발 KA4</button>
+            <button onclick="showManualImage('images/장착설명서/팰리세이드.jpg')">팰리세이드</button>
+            <button onclick="showManualImage('images/장착설명서/쏘렌토 UM,싼타페 TM.jpg')">쏘렌토 UM,싼타페 TM</button>
+            <button onclick="showManualImage('images/장착설명서/카니발 YP.jpg')">카니발 YP</button>
+        </div>
+        <div id="manual-image-display" style="margin-top: 30px; text-align: center;">
+            <img id="manual-image" src="" alt="" style="max-width: 100%; height: auto; display: none; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1);" />
+                  </div>
+</section>
 
   
 
@@ -221,8 +266,6 @@
   <a class="btn" href="https://smartstore.naver.com/tuningnkorea" target="_blank">네이버 스마트스토어 바로가기</a>
   <img src="images/store_preview.jpg" alt="스토어 미리보기" style="max-width: 100%; margin-top: 20px; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.05);">
 </section>
-
-
 
 
 
@@ -265,9 +308,6 @@
   }
 </script>
 
-</body>
-</html>
-
 <script>
   function showImage(src) {
     const img = document.getElementById('tein-image');
@@ -283,3 +323,27 @@
     img.style.display = 'block';
   }
 </script>
+
+<script>
+  function showManualContent(id) {
+    const manualContents = document.querySelectorAll('.manual-content');
+    manualContents.forEach(content => content.style.display = 'none');
+    document.getElementById(id).style.display = 'block';
+    
+    // Reset image display when switching tabs
+    const img = document.getElementById('manual-image');
+    if (img) {
+      img.style.display = 'none';
+      img.src = '';
+    }
+  }
+
+  function showManualImage(src) {
+    const img = document.getElementById('manual-image');
+    img.src = src;
+    img.style.display = 'block';
+  }
+</script>
+</body>
+</html>
+```
